@@ -1,0 +1,27 @@
+{
+  "name": "nigavshin-JS2020Q3",
+  "version": "1.0.0",
+  "description": "Private repository for @nigavshin",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/nigavshin-JS2020Q3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/nigavshin-JS2020Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/nigavshin-JS2020Q3#readme"
+}
