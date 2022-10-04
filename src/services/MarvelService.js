@@ -14,6 +14,11 @@ const useMarvelService = () => {
     return res.data.results.map(_transformCharacter);
   };
 
+  const getCharacterByName = async (name) => {
+    const res = await request(`${_apiBase}characters?name=${name}&${_apiKey}`);
+    return res.data.results.map(_transformCharacter);
+  };
+
   const getCharacter = async (id) => {
     const res = await request(`${_apiBase}characters/${id}?${_apiKey}`);
     return _transformCharacter(res.data.results[0]);
@@ -55,7 +60,9 @@ const useMarvelService = () => {
         : "No information about the number of pages",
       thumbnail: comics.thumbnail.path + "." + comics.thumbnail.extension,
       language: comics.textObjects.language || "en-us",
-      price: comics.prices[0].price ? `${comics.prices[0].price}$` : "not available",
+      price: comics.prices[0].price
+        ? `${comics.prices[0].price}$`
+        : "not available",
     };
   };
 
@@ -64,6 +71,7 @@ const useMarvelService = () => {
     error,
     clearError,
     getAllCharacters,
+    getCharacterByName,
     getCharacter,
     getAllComics,
     getComic,

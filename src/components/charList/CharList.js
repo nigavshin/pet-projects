@@ -85,19 +85,23 @@ const CharList = (props) => {
   const spinner = loading && !newItemLoading ? <Spinner /> : null;
 
   return (
-    <div className="char__list">
-      {errorMessage}
-      {spinner}
-      {items}
-      <button
-        className="button button__main button__long"
-        disabled={newItemLoading}
-        style={{ display: charEnded ? "none" : "block" }}
-        onClick={() => onRequest(offset)}
-      >
-        <div className="inner">load more</div>
-      </button>
-    </div>
+
+      <div className="char__list">
+        {errorMessage}
+        {spinner}
+        {items}
+        <button
+          className="button button__main button__long"
+          disabled={newItemLoading}
+          style={{ display: charEnded ? "none" : "block" }}
+          onClick={() => {
+            onRequest(offset);
+          }}
+        >
+          <div className="inner">load more</div>
+        </button>
+      </div>
+
   );
 };
 
